@@ -31,10 +31,11 @@ body {
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  position: relative;
   
   background: 
     linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), 
-    no-repeat url('/images/desktop/image-hero.jpg');
+    no-repeat url('../images/desktop/image-hero.jpg');
   background-size: cover;
   background-position: right center;
   display: grid;
@@ -52,6 +53,27 @@ body {
 
 .top-nav {
   display: flex;
+  position: relative;
+}
+
+.show .nav-links {
+  border: 1px solid black;
+  background-color: var(--black);
+  display: flex;
+  height: 100vh;
+  width: 40%;
+  position: fixed;
+  flex-direction: column;
+  top: 0;
+  right: 0;
+  align-items: flex-start;
+  justify-content: center;
+  z-index: 999;
+}
+
+.show .nav-links a {
+  margin: 2rem 0 0 2rem;
+  text-transform: uppercase;
 }
 
 .link {
